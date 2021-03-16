@@ -17,3 +17,12 @@
 .app__input {
   margin-top: 10px;
 }
+
+#target {
+  width: 70%;
+  height: 10vh;
+  border: 1px dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
