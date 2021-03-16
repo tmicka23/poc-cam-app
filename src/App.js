@@ -42,8 +42,9 @@ const App = () => {
       </div>
 
       <br />
-
+      <input type="file" accept="images/*" capture />
       <input type="file" accept="images/*" capture="user" />
+      <input type="file" accept="images/*" capture="environment" />
     </div>
   );
 };
