@@ -40,6 +40,10 @@ const App = () => {
           <button onClick={startPlaying}>Start</button>
         )}
       </div>
+
+      <br />
+
+      <input type="file" accept="images/*" capture="user" />
     </div>
   );
 };
