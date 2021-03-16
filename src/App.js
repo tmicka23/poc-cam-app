@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [playing, setPlaying] = useState(false);
+
+  const HEIGHT = 500;
+  const WIDTH = 500;
+
+  const startPlaying = () => {
+    setPlaying(true);
+    navigator.getUserMedia(
+      {
+        video: true,
+      },
+      (stream) => {
+        let video = document.getElementById("videoFeed");
+        if (video) {
+          video.srcObject = stream;
+        }
+      },
+      (err) => console.error(err)
+    );
+  };
+
+  const stopPlaying = () => {
+    setPlaying(false);
+    let video = document.querySelector("#videoFeed");
+    video.srcObject.getTracks()[0].stop();
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="app__container">
+        <video height={HEIGHT} width={WIDTH} autoPlay muted id="videoFeed" />
+      </div>
+      <div className="app__input">
+        {playing ? (
+          <button onClick={stopPlaying}>Stop</button>
+        ) : (
+          <button onClick={startPlaying}>Start</button>
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
