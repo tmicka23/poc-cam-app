@@ -1962,6 +1962,11 @@
     "@typescript-eslint/types" "4.15.2"
     eslint-visitor-keys "^2.0.0"
 
+"@ungap/custom-elements@^0.1.15":
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/@ungap/custom-elements/-/custom-elements-0.1.15.tgz#150302f2ccc51415ca5bc7bda21e57a1380de505"
+  integrity sha512-3MoJcrgrLWsVZIP9Jl1+82ZtXxi0BTmuBOZXDOti2Mu6/zjhVjOvCUscYkh9uGa9v/lg292imFgJ35Sd2nKF0A==
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"

@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "@ungap/custom-elements";
 import "@grafikart/drop-files-element";
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
         is="drop-files"
       />
 
-      <input type="file" accept="images/*" capture="user" multiple />
+      <input type="file" accept="images/*" capture="user" multiple></input>
     </div>
   );
 };
